@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Book Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='book_management.css') }}">
+
+
+</head>
+
+<body>
+    <h1 class="dashboard-header">Welcome to Library Dashboard</h1>
+    <h3 class="dashboard-header">Select Book You Love to Read..</h3>
+
+    <div class="book-management-container">
+        <form action="{{ url_for('book_management') }}" method="post">
+            <div class="categories-container">
+                {% for category, books in book_categories.items() %}
+                <div
+                    class="category-card {{ loop.cycle('bg-color-1', 'bg-color-2', 'bg-color-3', 'bg-color-4', 'bg-color-5') }}">
+                    <h2>{{ category }}</h2>
+                    {% for book in books %}
+                    <input class="input" type="checkbox" name="books" value="{{ book }}" {% if book in cart %}disabled{%
+                        endif %}>{{ book }}<br>
+                    <hr>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+</body>
+
+</html>

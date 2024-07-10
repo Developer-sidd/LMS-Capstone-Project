@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cart.css') }}">
+
+   
+</head>
+<body>
+    <div class="cart-container">
+        <h3>Selected Books</h3>
+        <ul>
+            {% for book in cart %}
+                <li>{{ book }}</li>
+            {% endfor %}
+        </ul>
+        <form action="/cart" method="post">
+            <label for="start_date">Start Date:</label>
+            <input type="date" id="start_date" name="start_date" required><br>
+            <button type="submit">Confirm Dates</button>
+        </form>
+    </div>
+</body>
+</html>

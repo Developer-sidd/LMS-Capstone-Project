@@ -1,0 +1,96 @@
+
+body {
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 130vh;
+    margin: 0;
+    color: white;
+}
+h2{
+font-size: 26px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: #fbff1d;
+}
+.dashboard-header {
+    margin-top: 20px;
+}
+
+.book-management-container {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+}
+
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.category-card {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.category-card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.category-card input {
+    margin-bottom: 10px;
+}
+
+.category-card hr {
+    border: 0.5px solid #555;
+}
+
+button {
+    background-color: #ffffff;
+    color: #e80000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    height: 40px;
+    width: 280px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #fbff1d;
+}
+
+.bg-color-1 {
+    background-color: #ff6f61;
+}
+
+.bg-color-2 {
+    background-color: #6b5b95;
+}
+
+.bg-color-3 {
+    background-color: #88b04b;
+}
+
+.bg-color-4 {
+    background-color: #d65076;
+}
+
+.bg-color-5 {
+    background-color: #45b8ac;
+}
